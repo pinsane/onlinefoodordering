@@ -1,30 +1,41 @@
 <template>
   <div>
-  <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-
-  <b-modal id="modal-1" title="BootstrapVue">
-      <!-- Material form login -->
-  <form>
-    <p class="h4 text-center mb-4">login</p>
-    <div class="grey-text">
-      <mdb-input label="Your email" icon="envelope" type="email"/>
-      <mdb-input label="Your password" icon="lock" type="password"/>
-    </div>
-    <div class="text-center">
-      <mdb-btn color="primary">login</mdb-btn>
-    </div>
-  </form>
-  <!-- Material form login -->
-  </b-modal>
-</div>
+    <b-modal id="modal-login" title ok-title="ورد" cancel-title="لغو" @ok="login">
+      <b-input-group label="Your email" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="person"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="email" v-model="userName" placeholder="ایمیل خود را وارد کنید"></b-form-input>
+      </b-input-group>
+      <b-input-group label="Your password" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="lock"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="password" v-model="password" placeholder="کلمه عبور را وارد کنید"></b-form-input>
+      </b-input-group>
+    </b-modal>
+  </div>
 </template>
 <script>
-  import { mdbInput, mdbBtn } from 'mdbvue';
-  export default {
-    name: 'Basic',
-    components: {
-      mdbInput,
-      mdbBtn
-    },
+export default {
+  name: "Login",
+  data() {
+    return {
+      userName: '',
+      password: ''
+    };
+  },
+  methods: {
+    login() {
+      if (this.userName === "demo" && this.password === "demo") {
+        // eslint-disable-next-line no-console
+        console.log("OK");
+      }
+      else {
+        // eslint-disable-next-line no-console
+        console.log("Error");
+      }
+    }
   }
+};
 </script>

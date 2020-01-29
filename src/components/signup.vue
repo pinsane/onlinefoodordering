@@ -1,33 +1,56 @@
 <template>
-    <div>
-  <b-button v-b-modal.modal-1>sign up</b-button>
-
-  <b-modal id="modal-1" title="BootstrapVue">
-     <!-- Material form register -->
-  <form>
-    <p class="h4 text-center mb-4">Sign up</p>
-    <div class="grey-text">
-      <mdb-input label="Your name" icon="user" type="text"/>
-      <mdb-input label="Your email" icon="envelope" type="email"/>
-      <mdb-input label="Your password" icon="lock" type="password"/>
-      <mdb-input label="Confirm Your password" icon="lock" type="password"/>
-    </div>
-    <div class="text-center">
-      <mdb-btn color="primary">Register</mdb-btn>
-    </div>
-  </form>
-  <!-- Material form register -->
-  </b-modal>
-</div>
+  <div>
+    <b-modal id="modal-register" ok-title="ثبت نام" cancel-title="لغو" @ok="register" >
+      <b-input-group label="Your email" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="person"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="text" name="name" v-model="name" placeholder="نام خود را وارد کنید"></b-form-input>
+      </b-input-group>      
+      <b-input-group label="Your email" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="person"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="email" v-model="userName" placeholder="ایمیل خود را وارد کنید"></b-form-input>
+      </b-input-group>
+      <b-input-group label="Your password" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="lock"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="password" v-model="password" placeholder="کلمه عبور را وارد کنید"></b-form-input>
+      </b-input-group>
+      <b-input-group label="Your password" size="sm" class="mb-2">
+        <b-input-group-prepend is-text>
+          <b-icon icon="lock"></b-icon>
+        </b-input-group-prepend>
+        <b-form-input type="password" v-model="passwordConfirm" placeholder="تکرار کلمه عبور را وارد کنید"></b-form-input>
+      </b-input-group>
+    </b-modal>
+  </div>
 </template>
 
 <script>
-  import { mdbInput, mdbBtn } from 'mdbvue';
-  export default {
-    name: 'Basic',
-    components: {
-      mdbInput,
-      mdbBtn
+export default {
+  name: "Register",
+  data() {
+    return {
+      name: '',
+      userName: '',
+      password: '',
+      passwordConfirm: '',
+    };
+  },
+  methods: {
+    register() {
+      // if (this.userName === "demo" && this.password === "demo") {
+      //   // eslint-disable-next-line no-console
+      //   console.log("OK");
+      // }
+      // else {
+      //   // eslint-disable-next-line no-console
+      //   console.log("Error");
+      // }
     }
   }
+};
 </script>

@@ -19,8 +19,10 @@
         </b-nav-form>
 
       <b-navbar-nav>
-        <b-nav-item to="/">ثبت نام</b-nav-item>
-        <b-nav-item to="/">ورود</b-nav-item>
+         <b-nav-item v-b-modal.modal-login>ورود</b-nav-item>
+        <b-nav-item v-b-modal.modal-register>ثبت نام</b-nav-item>
+        <!-- <b-nav-item to="/">ثبت نام</b-nav-item>
+        <b-nav-item to="/">ورود</b-nav-item> -->
       </b-navbar-nav>
 
         <b-nav-item-dropdown right>
