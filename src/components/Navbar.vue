@@ -29,6 +29,9 @@
             <b-nav-item v-b-modal.modal-login>ورود</b-nav-item>
             <b-nav-item v-b-modal.modal-register>ثبت نام</b-nav-item>
             <b-nav-item to="/product-list">List</b-nav-item>
+            <b-nav-item to="/checkout-page">Checkout</b-nav-item>
+            <b-nav-item to="/product-page">Product</b-nav-item>
+            
             <!-- <li class="nav-item active">
               <a href="index.html" class="nav-link">Home</a>
             </li> -->
