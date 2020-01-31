@@ -28,10 +28,11 @@
 
             <b-nav-item v-b-modal.modal-login>ورود</b-nav-item>
             <b-nav-item v-b-modal.modal-register>ثبت نام</b-nav-item>
-            <li class="nav-item active">
+            <b-nav-item to="/product-list">List</b-nav-item>
+            <!-- <li class="nav-item active">
               <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item dropdown">
+            </li> -->
+            <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -56,12 +57,10 @@
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item cta cta-colored">
-              <a href="cart.html" class="nav-link">
-                <span class="icon-shopping_cart"></span>[0]
-              </a>
-            </li>
+            </li> -->
+            <b-nav-item class="nav-item cta cta-colored"  to="cart">
+              <span class="icon-shopping_cart"></span>[0]
+            </b-nav-item>
           </b-navbar-nav>
         </div>
         <!-- Right aligned nav items -->
