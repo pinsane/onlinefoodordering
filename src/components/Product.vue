@@ -2,7 +2,7 @@
   <div class="product">
     <a href="#" class="img-prod">
       <img class="img-fluid" :src="item.image" alt="Colorlib Template" />
-      <span class="status">30%</span>
+      <span v-if="item.discount" class="status">{{item.discount}}%</span>
       <div class="overlay"></div>
     </a>
     <div class="text py-3 pb-4 px-3 text-center">

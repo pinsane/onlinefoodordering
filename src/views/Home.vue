@@ -338,12 +338,14 @@ export default {
           name: "غذای خوشمزه 8",
           price: 100,
           salePrice: 80,
-          image:'images/product-1.jpg'
+          image:'images/product-1.jpg',
+          discount:30
         },
         {
           name: "غذای خوشمزه 7",
            salePrice: 80,
-          image:'images/product-2.jpg'
+          image:'images/product-2.jpg',
+          discount:35
         },
         {
           name: "غذای خوشمزه 6",
@@ -355,7 +357,8 @@ export default {
           name: "غذای خوشمزه 1",
           price: 2000,
           salePrice: 1000,
-          image:'images/product-4.jpg'
+          image:'images/product-4.jpg',
+          discount:45
         },
         {
           name: "غذای خوشمزه 2",
