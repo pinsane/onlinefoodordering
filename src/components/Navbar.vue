@@ -86,12 +86,21 @@
         </b-navbar-nav>-->
       </b-collapse>
     </div>
+        <signup/>
+    <login/>
   </nav>
 </template>
 
 
 <script>
-export default {};
+import signup from "@/components/signup.vue";
+import login from "@/components/login.vue";
+export default {
+  components: {
+    signup,
+    login
+  }
+};
 </script>
 
 <style lang="scss" scoped>
