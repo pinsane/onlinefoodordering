@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-3 ftco-animate" v-for="product in productList" :key="product.name">
+          <div class="col-md-6 col-lg-3 ftco-animate" v-for="product in productList.items" :key="product.id">
             <Product :item="product" />
           </div>
         </div>
@@ -64,6 +64,7 @@
 
 <script>
 import Product from "@/components/Product.vue";
+import productService from '@/services/product.service.js'
 
 export default {
   components: {
@@ -71,78 +72,14 @@ export default {
   },
   data() {
     return {
-      productList: [
-        {
-          name: "غذای خوشمزه 8",
-          price: 100,
-          salePrice: 80,
-          image: "images/product-1.jpg",
-          discount: 30
-        },
-        {
-          name: "غذای خوشمزه 7",
-          salePrice: 80,
-          image: "images/product-2.jpg",
-          discount: 35
-        },
-        {
-          name: "غذای خوشمزه 6",
-          price: 10000,
-          salePrice: 50,
-          image: "images/product-3.jpg"
-        },
-        {
-          name: "غذای خوشمزه 1",
-          price: 2000,
-          salePrice: 1000,
-          image: "images/product-4.jpg",
-          discount: 45
-        },
-        {
-          name: "غذای خوشمزه 2",
-          salePrice: 100,
-          image: "images/product-5.jpg"
-        },
-        {
-          name: "غذای خوشمزه 3",
-          price: 200000,
-          salePrice: 1000,
-          image: "images/product-6.jpg"
-        },
-        {
-          name: "غذای خوشمزه 4",
-          price: 9999,
-          salePrice: 666,
-          image: "images/product-7.jpg"
-        },
-        {
-          name: "غذای خوشمزه 5",
-          salePrice: 1,
-          image: "images/product-8.jpg"
-        },
-        {
-          name: "غذای خوشمزه 9",
-          salePrice: 1,
-          image: "images/product-9.jpg"
-        },
-        {
-          name: "غذای خوشمزه 10",
-          salePrice: 1,
-          image: "images/product-10.jpg"
-        },
-        {
-          name: "غذای خوشمزه 11",
-          salePrice: 1,
-          image: "images/product-11.jpg"
-        },
-        {
-          name: "غذای خوشمزه 12",
-          salePrice: 1,
-          image: "images/product-12.jpg"
-        }
-      ]
+      productList: {},
     };
-  }
+  },
+  mounted () {
+     productService.getProducts(8, 0).then((result) => {
+         this.productList = result;
+     });
+  },
 };
 </script>
 

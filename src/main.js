@@ -5,6 +5,7 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import store from './store'
 import router from './router'
+//import '@/services/interceptor';
 
 Vue.config.productionTip = false
 
