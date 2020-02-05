@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import productService from '@/services/product.service.js'
-import userService from '@/services/product.service.js'
+import userService from '@/services/user.service.js'
 
 Vue.use(Vuex)
 
@@ -11,7 +10,7 @@ export default new Vuex.Store({
             items:[],
             total:0
         },
-        currentUser: null
+        currentUser: localStorage.currentUser && localStorage.currentUser != '' ? JSON.parse(localStorage.currentUser) : null,
     },
     getters: {
         products: s => s.products,
@@ -20,8 +19,8 @@ export default new Vuex.Store({
         currentUser: s => s.currentUser,
     },
     actions: {
-        addToCart() {
-
+        addToCart({commit}, {product, quantity},) {
+            commit ('addToCart', {product, quantity});
         },
         removeFromCart() {
 
@@ -33,7 +32,7 @@ export default new Vuex.Store({
             return userService.getUsers().then((response)=> {
                 const user = response.data.userList.filter(u=>u.username === username && u.password === password);
                 if(user && user.length === 1) {
-                    commit ('login', user);
+                    commit ('login', user[0]);
                     return true;
                 }
                 else {
@@ -48,11 +47,13 @@ export default new Vuex.Store({
     mutations: {
         login(s, user) {
             s.currentUser = user;
+            localStorage.currentUser = JSON.stringify(user);
         },
         logout(s) {
             s.currentUser = null;
+            localStorage.currentUser = '';
         },
-        addToCart(s, product, quantity) {
+        addToCart(s, {product, quantity}) {
             const existItem = s.cart.items.find(i=>i.product.id === product.id);
             if(existItem) {
                 existItem.quantity += quantity;

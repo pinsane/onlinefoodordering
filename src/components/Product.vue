@@ -1,13 +1,13 @@
 <template>
-  <div class="product">
+  <div class="product" >
     <a href="#" class="img-prod">
       <img class="img-fluid" :src="item.image" alt="Colorlib Template" />
       <span v-if="item.discount" class="status">{{item.discount}}%</span>
-      <div class="overlay"></div>
+      <router-link class="overlay" :to="`/product/${item.id}`"></router-link>
     </a>
     <div class="text py-3 pb-4 px-3 text-center">
       <h3>
-        <a href="#">{{item.name}}</a>
+        <a>{{item.name}}</a>
       </h3>
       <div class="d-flex">
         <div class="pricing">

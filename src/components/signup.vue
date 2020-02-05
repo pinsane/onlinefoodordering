@@ -1,6 +1,5 @@
 <template>
   <div>
-    <b-modal id="modal-register" ok-title="ثبت نام" cancel-title="لغو" @ok="register" >
       <b-input-group label="Your email" size="sm" class="mb-2">
         <b-input-group-prepend is-text>
           <b-icon icon="person"></b-icon>
@@ -25,7 +24,6 @@
         </b-input-group-prepend>
         <b-form-input type="password" v-model="passwordConfirm" placeholder="تکرار کلمه عبور را وارد کنید"></b-form-input>
       </b-input-group>
-    </b-modal>
   </div>
 </template>
 

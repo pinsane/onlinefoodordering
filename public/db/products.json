@@ -5,14 +5,15 @@
         "name": "غذای خوشمزه 8",
         "price": 100,
         "salePrice": 80,
-        "image": "images/product-1.jpg",
-        "discount": 30
+        "image": "/images/product-1.jpg",
+        "discount": 30,
+        "description" : "توضیحات غذای 8"
       },
       {
         "id": 7,
         "name": "غذای خوشمزه 7",
         "salePrice": 80,
-        "image": "images/product-2.jpg",
+        "image": "/images/product-2.jpg",
         "discount": 35
       },
       {
@@ -20,79 +21,80 @@
         "name": "غذای خوشمزه 6",
         "price": 10000,
         "salePrice": 50,
-        "image": "images/product-3.jpg"
+        "image": "/images/product-3.jpg"
       },
       {
         "id": 1,
         "name": "غذای خوشمزه 1",
         "price": 2000,
         "salePrice": 1000,
-        "image": "images/product-4.jpg",
-        "discount": 45
+        "image": "/images/product-4.jpg",
+        "discount": 45,
+        "description" : "توضیحات غذای 1"
       },
       {
         "id": 2,
         "name": "غذای خوشمزه 2",
         "salePrice": 100,
-        "image": "images/product-5.jpg"
+        "image": "/images/product-5.jpg"
       },
       {
         "id": 3,
         "name": "غذای خوشمزه 3",
         "price": 200000,
         "salePrice": 1000,
-        "image": "images/product-6.jpg"
+        "image": "/images/product-6.jpg"
       },
       {
         "id": 4,
         "name": "غذای خوشمزه 4",
         "price": 9999,
         "salePrice": 666,
-        "image": "images/product-7.jpg"
+        "image": "/images/product-7.jpg"
       },
       {
         "id": 5,
         "name": "غذای خوشمزه 5",
         "salePrice": 1,
-        "image": "images/product-8.jpg"
+        "image": "/images/product-8.jpg"
       },
       {
         "id": 9,
         "name": "غذای خوشمزه 9",
         "salePrice": 1,
-        "image": "images/product-9.jpg"
+        "image": "/images/product-9.jpg"
       },
       {
         "id": 10,
         "name": "غذای خوشمزه 10",
         "salePrice": 1,
-        "image": "images/product-10.jpg"
+        "image": "/images/product-10.jpg"
       },
       {
         "id": 11,
         "name": "غذای خوشمزه 11",
         "salePrice": 1,
-        "image": "images/product-11.jpg"
+        "image": "/images/product-11.jpg"
       },
       {
         "id": 12,
         "name": "غذای خوشمزه 12",
         "salePrice": 1,
-        "image": "images/product-12.jpg"
+        "image": "/images/product-12.jpg"
       },
       {
         "id": 13,
         "name": "غذای خوشمزه 13",
         "price": 100,
         "salePrice": 80,
-        "image": "images/product-1.jpg",
+        "image": "/images/product-1.jpg",
         "discount": 30
       },
       {
         "id": 14,
         "name": "غذای خوشمزه 14",
         "salePrice": 80,
-        "image": "images/product-2.jpg",
+        "image": "/images/product-2.jpg",
         "discount": 35
       },
       {
@@ -100,79 +102,79 @@
         "name": "غذای خوشمزه 15",
         "price": 10000,
         "salePrice": 50,
-        "image": "images/product-3.jpg"
+        "image": "/images/product-3.jpg"
       },
       {
         "id": 16,
         "name": "غذای خوشمزه 16",
         "price": 2000,
         "salePrice": 1000,
-        "image": "images/product-4.jpg",
+        "image": "/images/product-4.jpg",
         "discount": 45
       },
       {
         "id": 17,
         "name": "غذای خوشمزه 17",
         "salePrice": 100,
-        "image": "images/product-5.jpg"
+        "image": "/images/product-5.jpg"
       },
       {
         "id": 18,
         "name": "غذای خوشمزه18",
         "price": 200000,
         "salePrice": 1000,
-        "image": "images/product-6.jpg"
+        "image": "/images/product-6.jpg"
       },
       {
         "id": 19,
         "name": "غذای خوشمزه 19",
         "price": 9999,
         "salePrice": 666,
-        "image": "images/product-7.jpg"
+        "image": "/images/product-7.jpg"
       },
       {
         "id": 20,
         "name": "غذای خوشمزه 20",
         "salePrice": 1,
-        "image": "images/product-8.jpg"
+        "image": "/images/product-8.jpg"
       },
       {
         "id": 21,
         "name": "غذای خوشمزه 21",
         "salePrice": 1,
-        "image": "images/product-9.jpg"
+        "image": "/images/product-9.jpg"
       },
       {
         "id": 22,
         "name": "غذای خوشمزه 22",
         "salePrice": 1,
-        "image": "images/product-10.jpg"
+        "image": "/images/product-10.jpg"
       },
       {
         "id": 23,
         "name": "غذای خوشمزه 23",
         "salePrice": 1,
-        "image": "images/product-11.jpg"
+        "image": "/images/product-11.jpg"
       },
       {
         "id": 24,
         "name": "غذای خوشمزه 24",
         "salePrice": 1,
-        "image": "images/product-12.jpg"
+        "image": "/images/product-12.jpg"
       },
       {
         "id": 25,
         "name": "غذای خوشمزه25",
         "price": 100,
         "salePrice": 80,
-        "image": "images/product-1.jpg",
+        "image": "/images/product-1.jpg",
         "discount": 30
       },
       {
         "id": 26,
         "name": "غذای خوشمزه 26",
         "salePrice": 80,
-        "image": "images/product-2.jpg",
+        "image": "/images/product-2.jpg",
         "discount": 35
       },
       {
@@ -180,65 +182,65 @@
         "name": "غذای خوشمزه 27",
         "price": 10000,
         "salePrice": 50,
-        "image": "images/product-3.jpg"
+        "image": "/images/product-3.jpg"
       },
       {
         "id": 28,
         "name": "غذای خوشمزه 28",
         "price": 2000,
         "salePrice": 1000,
-        "image": "images/product-4.jpg",
+        "image": "/images/product-4.jpg",
         "discount": 45
       },
       {
         "id": 29,
         "name": "غذای خوشمزه 29",
         "salePrice": 100,
-        "image": "images/product-5.jpg"
+        "image": "/images/product-5.jpg"
       },
       {
         "id": 30,
         "name": "غذای خوشمزه 30",
         "price": 200000,
         "salePrice": 1000,
-        "image": "images/product-6.jpg"
+        "image": "/images/product-6.jpg"
       },
       {
         "id": 31,
         "name": "غذای خوشمزه 31",
         "price": 9999,
         "salePrice": 666,
-        "image": "images/product-7.jpg"
+        "image": "/images/product-7.jpg"
       },
       {
         "id": 32,
         "name": "غذای خوشمزه 32",
         "salePrice": 1,
-        "image": "images/product-8.jpg"
+        "image": "/images/product-8.jpg"
       },
       {
         "id": 33,
         "name": "غذای خوشمزه33",
         "salePrice": 1,
-        "image": "images/product-9.jpg"
+        "image": "/images/product-9.jpg"
       },
       {
         "id": 34,
         "name": "غذای خوشمزه 34",
         "salePrice": 1,
-        "image": "images/product-10.jpg"
+        "image": "/images/product-10.jpg"
       },
       {
         "id": 35,
         "name": "غذای خوشمزه 35",
         "salePrice": 1,
-        "image": "images/product-11.jpg"
+        "image": "/images/product-11.jpg"
       },
       {
         "id": 36,
         "name": "غذای خوشمزه 36",
         "salePrice": 1,
-        "image": "images/product-12.jpg"
+        "image": "/images/product-12.jpg"
       }
     ]
   }

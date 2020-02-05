@@ -13,7 +13,7 @@ export default {
     },
     getProduct(id) {
         return axios.get(`/db/products.json`).then(response => {
-            return response.data.productList.filter(p => p.id == id);
+            return response.data.productList.filter(p => p.id == id)[0];
         });
     }
     // bulkUpdate (ctx, value) {
