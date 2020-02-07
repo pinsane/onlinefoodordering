@@ -13,26 +13,24 @@ export default new Vuex.Store({
         currentUser: localStorage.currentUser && localStorage.currentUser != '' ? JSON.parse(localStorage.currentUser) : null,
     },
     getters: {
-        products: s => s.products,
-        users: s => s.users,
         cart: s => s.cart,
         currentUser: s => s.currentUser,
     },
     actions: {
-        addToCart({commit}, {product, quantity},) {
+        addToCart({commit}, {product, quantity}) {
             commit ('addToCart', {product, quantity});
         },
-        removeFromCart() {
-
+        removeFromCart({commit}, {product, quantity}) {
+            commit ('removeFromCart', {product, quantity});
         },
         checkout() {
 
         },
         login ({ commit }, {username, password}) {
             return userService.getUsers().then((response)=> {
-                const user = response.data.userList.filter(u=>u.username === username && u.password === password);
-                if(user && user.length === 1) {
-                    commit ('login', user[0]);
+                const user = response.data.userList.find(u=>u.username === username && u.password === password);
+                if(user) {
+                    commit ('login', user);
                     return true;
                 }
                 else {
@@ -66,7 +64,7 @@ export default new Vuex.Store({
             if(existItem) {
                 existItem.quantity -= quantity;
                 if(existItem.quantity <= 0) {
-                    s.cart.items = s.cart.items.filter(i=>i.product.id === product.id);
+                    s.cart.items = s.cart.items.filter(i=>i.product.id !== product.id);
                 }
             }
         }

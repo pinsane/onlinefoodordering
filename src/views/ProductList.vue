@@ -32,27 +32,15 @@
           <div class="col text-center">
             <div class="block-27">
               <ul>
-                <li>
-                  <a href="#">&lt;</a>
+                <li :class="currentPage>1?'hand':''" @click="e=>currentPage>1 && loadProducts(currentPage-1)" >
+                  <span>&lt;</span>
                 </li>
-                <li class="active">
-                  <span>1</span>
+                 <li v-for="p in pageCount" :key="p" :class="getPagerClass(p)" @click="loadProducts(p)" >
+                  <span>{{p}}</span>
                 </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#">4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#">&gt;</a>
-                </li>
+                <li :class="currentPage<pageCount ?'hand':''" @click="e=>currentPage<pageCount && loadProducts(currentPage+1)">
+                  <span>&gt;</span>
+                </li> 
               </ul>
             </div>
           </div>
@@ -73,7 +61,27 @@ export default {
   data() {
     return {
       productList: {},
+      currentPage: 1,
     };
+  },
+  methods: {
+    loadProducts(pi) {
+      productService.getProducts(8, pi -1).then((result) => {
+         this.productList = result;
+         this.currentPage = pi;
+     });
+    },
+      getPagerClass(p) {
+      return this.currentPage === p ? 'active' : 'hand';
+    }
+  },
+  computed: {
+    pageCount() {
+      if (this.productList.total) {
+        return Math.floor(this.productList.total/8)
+      }
+      return 0;
+    }
   },
   mounted () {
      productService.getProducts(8, 0).then((result) => {
@@ -84,4 +92,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hand {
+  cursor: pointer;
+}
 </style>

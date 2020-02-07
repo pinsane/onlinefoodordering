@@ -84,7 +84,7 @@
               </p>
             </div>
             <p>
-              <a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a>
+              <a @click="checkout" class="btn btn-primary py-3 px-4">Proceed to Checkout</a>
             </p>
           </div>
         </div>
@@ -117,6 +117,11 @@ import CartRow from "@/components/Cart/CartRow.vue";
 export default {
   components: {
     CartRow
+  },
+  methods: {
+    checkout() {
+      this.$router.push({path:'checkout-page'})
+    }
   },
   computed: {
     cart() {
