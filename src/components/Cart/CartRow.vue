@@ -18,6 +18,12 @@
 
     <td class="quantity">
       <div class="input-group mb-3">
+         <span class="input-group-btn mr-2">
+                  <button
+                    type="button" class="quantity-left-minus btn" @click="quantity++">
+                    <i class="ion-ios-add"></i>
+                  </button>
+          </span>
         <input
         readonly
           type="text"
@@ -27,6 +33,11 @@
           min="1"
           max="100"
         />
+        <span class="input-group-btn ml-2">
+                  <button type="button" class="quantity-right-plus btn" @click="e=>quantity>1 && quantity--">
+                    <i class="ion-ios-remove"></i>
+                  </button>
+         </span>
       </div>
     </td>
 
