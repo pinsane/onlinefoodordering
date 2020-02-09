@@ -64,23 +64,19 @@
           </div>
           <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
             <div class="cart-total mb-3">
-              <h3>Cart Totals</h3>
+              <h3>مجموع سبد خرید</h3>
               <p class="d-flex">
-                <span>Subtotal</span>
-                <span>$20.60</span>
+                <span>قیمت کل</span>
+                <span dir="ltr">{{totalPrice}} ریال</span>
               </p>
               <p class="d-flex">
-                <span>Delivery</span>
-                <span>$0.00</span>
-              </p>
-              <p class="d-flex">
-                <span>Discount</span>
-                <span>$3.00</span>
+                <span>تخفیف</span>
+                <span dir="ltr">-{{totalDiscount}} ریال</span>
               </p>
               <hr />
               <p class="d-flex total-price">
-                <span>Total</span>
-                <span>$17.60</span>
+                <span>قابل پرداخت</span>
+                <span dir="ltr">{{total}} ریال</span>
               </p>
             </div>
             <p>
@@ -127,6 +123,15 @@ export default {
     cart() {
       return this.$store.getters.cart;
     },
+    total() {
+           return  this.$store.getters.cart.total;
+    },
+    totalDiscount() {
+           return  this.$store.getters.cart.totalDiscount;
+    },
+    totalPrice() {
+           return this.total + this.totalDiscount;
+    }
   },
 };
 </script>

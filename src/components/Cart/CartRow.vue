@@ -1,7 +1,7 @@
 <template>
   <tr class="text-center">
-    <td class="product-remove">
-      <a href="#">
+    <td class="product-remove" >
+      <a @click="removeFromCart">
         <span class="ion-ios-close"></span>
       </a>
     </td>
@@ -34,7 +34,7 @@
           max="100"
         />
         <span class="input-group-btn ml-2">
-                  <button type="button" class="quantity-right-plus btn" @click="removeFromCart">
+                  <button type="button" class="quantity-right-plus btn" @click="decreaseItemFromCart">
                     <i class="ion-ios-remove"></i>
                   </button>
          </span>
@@ -56,8 +56,11 @@ export default {
     addToCart() {
       this.$store.dispatch('addToCart', {product:this.product, quantity:1});
     },
-      removeFromCart() {
+    decreaseItemFromCart() {
       this.$store.dispatch('removeFromCart', {product:this.product, quantity:1});
+    },
+    removeFromCart() {
+      this.$store.dispatch('removeFromCart', {product:this.product, quantity:this.quantity});
     }
   },
     computed: {

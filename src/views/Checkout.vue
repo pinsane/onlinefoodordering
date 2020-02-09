@@ -1,8 +1,7 @@
 <template>
   <div>
-      
-      <HeaderImage/>
-    <section class="ftco-section">
+    <HeaderImage />
+    <section v-if="!isCheckout" class="ftco-section">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
@@ -107,23 +106,19 @@
             <div class="row mt-5 pt-3">
               <div class="col-md-12 d-flex mb-5">
                 <div class="cart-detail cart-total p-3 p-md-4">
-                  <h3 class="billing-heading mb-4">Cart Total</h3>
+                  <h3 class="billing-heading mb-4">مجموع سبد خرید</h3>
                   <p class="d-flex">
-                    <span>Subtotal</span>
-                    <span>$20.60</span>
+                    <span>قیمت کل</span>
+                    <span dir="ltr">{{totalPrice}} ریال</span>
                   </p>
                   <p class="d-flex">
-                    <span>Delivery</span>
-                    <span>$0.00</span>
-                  </p>
-                  <p class="d-flex">
-                    <span>Discount</span>
-                    <span>$3.00</span>
+                    <span>تخفیف</span>
+                    <span dir="ltr">-{{totalDiscount}} ریال</span>
                   </p>
                   <hr />
                   <p class="d-flex total-price">
-                    <span>Total</span>
-                    <span>$17.60</span>
+                    <span>قابل پرداخت</span>
+                    <span dir="ltr">{{total}} ریال</span>
                   </p>
                 </div>
               </div>
@@ -167,13 +162,24 @@
                     </div>
                   </div>
                   <p>
-                    <a href="#" class="btn btn-primary py-3 px-4">Place an order</a>
+                    <a @click="placeOrder" class="btn btn-primary py-3 px-4">Place an order</a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <!-- .col-md-8 -->
+        </div>
+      </div>
+    </section>
+    <section v-else class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 ftco-animate">
+            <form action="#" class="billing-form">
+              <h3 class="mb-4 billing-heading">سفارش شما در سیستم ثبف شد. شماره سفارش 456785433</h3>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -201,12 +207,36 @@
 </template>
 
 <script>
-import HeaderImage from '@/components/HeaderImage.vue';
+import HeaderImage from "@/components/HeaderImage.vue";
 export default {
-components: {
-    HeaderImage,
-},
-
+  components: {
+    HeaderImage
+  },
+  data() {
+    return {
+      isCheckout: false
+    };
+  },
+  methods: {
+    placeOrder() {
+      this.isCheckout = true;
+      this.$store.dispatch('checkout');
+    }
+  },
+  computed: {
+    cart() {
+      return this.$store.getters.cart;
+    },
+    total() {
+      return this.$store.getters.cart.total;
+    },
+    totalDiscount() {
+      return this.$store.getters.cart.totalDiscount;
+    },
+    totalPrice() {
+      return this.total + this.totalDiscount;
+    }
+  }
 };
 </script>
 
