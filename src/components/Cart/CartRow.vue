@@ -20,7 +20,7 @@
       <div class="input-group mb-3">
          <span class="input-group-btn mr-2">
                   <button
-                    type="button" class="quantity-left-minus btn" @click="quantity++">
+                    type="button" class="quantity-left-minus btn" @click="addToCart">
                     <i class="ion-ios-add"></i>
                   </button>
           </span>
@@ -34,7 +34,7 @@
           max="100"
         />
         <span class="input-group-btn ml-2">
-                  <button type="button" class="quantity-right-plus btn" @click="e=>quantity>1 && quantity--">
+                  <button type="button" class="quantity-right-plus btn" @click="removeFromCart">
                     <i class="ion-ios-remove"></i>
                   </button>
          </span>
@@ -52,6 +52,14 @@ export default {
         quantity: Number
 
     },
+    methods: {
+    addToCart() {
+      this.$store.dispatch('addToCart', {product:this.product, quantity:1});
+    },
+      removeFromCart() {
+      this.$store.dispatch('removeFromCart', {product:this.product, quantity:1});
+    }
+  },
     computed: {
         total() {
             return this.quantity * this.product.salePrice;

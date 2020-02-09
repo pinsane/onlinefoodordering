@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     okText() {
-      return this.tabIndex === 0 ?  'ورد' : 'ثبت نام'
+      return this.tabIndex === 0 ?  'ورود' : 'ثبت نام'
     }
   },
 };
