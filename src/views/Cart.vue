@@ -72,7 +72,7 @@
               </p>
               <p class="d-flex">
                 <span>تخفیف</span>
-                <span dir="ltr">-{{totalDiscount}} ریال</span>
+                <span dir="ltr">{{totalDiscount}} ریال</span>
               </p>
               <hr />
               <p class="d-flex total-price">

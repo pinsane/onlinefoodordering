@@ -4,7 +4,7 @@
     id="ftco-navbar"
   >
     <div class="container">
-      <b-navbar-brand to="/" class="navbar-brand">Online Food</b-navbar-brand>
+      <b-navbar-brand to="/" class="navbar-brand">سفارش آنلاین غذا</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
