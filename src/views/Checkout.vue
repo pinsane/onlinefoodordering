@@ -11,57 +11,30 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="firstname">نام</label>
-                    <input type="text" class="form-control" placeholder />
+                    <input type="text" class="form-control" placeholder v-model="additionalInfo.name" />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="lastname">نام خانوادگی</label>
-                    <input type="text" class="form-control" placeholder />
+                    <input type="text" class="form-control" placeholder v-model="additionalInfo.lastName" />
                   </div>
                 </div>
                 <div class="w-100"></div>
                 <div class="col-md-12">
-             
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-6">
                   <div class="form-group">
                     <label for="streetaddress">آدرس محل تحویل</label>
-                    <input
-                      type="text"
+                    <textarea 
                       class="form-control"
-                      placeholder="House number and street name"
+                      placeholder="House number and street name" v-model="additionalInfo.address"
                     />
                   </div> 
                 </div> 
-                <!-- <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Appartment, suite, unit etc: (optional)"
-                    />
-                  </div>
-                </div> -->
-                <!-- <div class="w-100"></div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="towncity">Town / City</label>
-                    <input type="text" class="form-control" placeholder />
-                  </div>
-                </div> -->
-                <!-- <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="postcodezip">Postcode / ZIP *</label>
-                    <input type="text" class="form-control" placeholder />
-                  </div>
-                </div> -->
                 <div class="w-100"></div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="phone">شماره تلفن</label>
-                    <input type="text" class="form-control" placeholder />
+                    <input type="text" class="form-control" placeholder v-model="additionalInfo.tel" />
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -70,19 +43,7 @@
                     <input type="text" class="form-control" placeholder />
                   </div>
                 </div>
-                <div class="w-100"></div>
-                <!-- <div class="col-md-12">
-                  <div class="form-group mt-4">
-                    <div class="radio">
-                      <label class="mr-3">
-                        <input type="radio" name="optradio" /> Create an Account?
-                      </label>
-                      <label>
-                        <input type="radio" name="optradio" /> Ship to different address
-                      </label>
-                    </div>
-                  </div>
-                </div> -->
+                <div class="w-100"></div>  
               </div>
             </form>
             <!-- END -->
@@ -90,22 +51,7 @@
           <div class="col-xl-5">
             <div class="row mt-5 pt-3">
               <div class="col-md-12 d-flex mb-5">
-                <div class="cart-detail cart-total p-3 p-md-4">
-                  <h3 class="billing-heading mb-4">مجموع سبد خرید</h3>
-                  <p class="d-flex">
-                    <span>قیمت کل</span>
-                    <span dir="ltr">{{totalPrice}} ریال</span>
-                  </p>
-                  <p class="d-flex">
-                    <span>تخفیف</span>
-                    <span dir="ltr">-{{totalDiscount}} ریال</span>
-                  </p>
-                  <hr />
-                  <p class="d-flex total-price">
-                    <span>قابل پرداخت</span>
-                    <span dir="ltr">{{total}} ریال</span>
-                  </p>
-                </div>
+                <TotalPrice />
               </div>
               <div class="col-md-12">
                 <div class="cart-detail p-3 p-md-4">
@@ -147,7 +93,7 @@
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
             <form action="#" class="billing-form">
-              <h3 class="mb-4 billing-heading">سفارش شما با شماره 818652 در سیستم ثبت شد.</h3>
+              <h3 class="mb-4 billing-heading">سفارش شما با شماره {{additionalInfo.orderId}} در سیستم ثبت شد.</h3>
             </form>
           </div>
         </div>
@@ -179,19 +125,24 @@
 
 <script>
 import HeaderImage from "@/components/HeaderImage.vue";
+import TotalPrice from "@/components/Cart/TotalPrice.vue";
+
 export default {
   components: {
-    HeaderImage
+    HeaderImage,
+    TotalPrice
   },
   data() {
     return {
-      isCheckout: false
+      isCheckout: false,
+      additionalInfo: {},
     };
   },
   methods: {
     placeOrder() {
+      this.additionalInfo.orderId = Math.random().toString(36).substring(3, 7) + Math.random().toString(36).substring(11, 15);
       this.isCheckout = true;
-      this.$store.dispatch('checkout');
+      this.$store.dispatch('checkout', this.additionalInfo);
     }
   },
   computed: {

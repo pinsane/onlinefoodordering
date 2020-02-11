@@ -2,32 +2,13 @@
   <div>
     <section class="ftco-section ftco-cart">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="cart-list">
-              <table class="table">
-                <thead class="thead-primary">
-                  <tr class="text-center">
-                    <th>&nbsp;</th>
-                    <th>&nbsp;</th>
-                    <th>غذا</th>
-                    <th>قیمت</th>
-                    <th>مقدار</th>
-                    <th>قیمت کل</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <CartRow v-for="row in cart.items" :key="row.id" :product="row.product" :quantity="row.quantity"/>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+
+        <CartContext :cartItems="cart.items" />
+
         <div class="row justify-content-end">
           <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
             <div class="cart-total mb-3">
               <h3>  تخفیف</h3>
-
               <form action="#" class="info">
                 <div class="form-group">
                   <label for>کد تخفیف</label>
@@ -39,47 +20,8 @@
               <a href="checkout.html" class="btn btn-primary py-3 px-4">اعمال تخفیف</a>
             </p>
           </div>
-          <!-- <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-            <div class="cart-total mb-3">
-              <h3>Estimate shipping and tax</h3>
-              <p>Enter your destination to get a shipping estimate</p>
-              <form action="#" class="info">
-                <div class="form-group">
-                  <label for>Country</label>
-                  <input type="text" class="form-control text-left px-3" placeholder />
-                </div>
-                <div class="form-group">
-                  <label for="country">State/Province</label>
-                  <input type="text" class="form-control text-left px-3" placeholder />
-                </div>
-                <div class="form-group">
-                  <label for="country">Zip/Postal Code</label>
-                  <input type="text" class="form-control text-left px-3" placeholder />
-                </div>
-              </form>
-            </div>
-            <p>
-              <a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a>
-            </p>
-          </div> -->
           <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-            <div class="cart-total mb-3">
-              <h3>مجموع سبد خرید</h3>
-
-              <p class="d-flex">
-                <span>قیمت کل</span>
-                <span dir="ltr">{{totalPrice}} ریال</span>
-              </p>
-              <p class="d-flex">
-                <span>تخفیف</span>
-                <span dir="ltr">{{totalDiscount}} ریال</span>
-              </p>
-              <hr />
-              <p class="d-flex total-price">
-                <span>قابل پرداخت</span>
-                <span dir="ltr">{{total}} ریال</span>
-              </p>
-            </div>
+            <TotalPrice />
             <p>
               <a @click="checkout" class="btn btn-primary py-3 px-4">نهایی کردن خرید</a>
             </p>
@@ -111,10 +53,13 @@
 </template>
 
 <script>
-import CartRow from "@/components/Cart/CartRow.vue";
+import CartContext from "@/components/Cart/CartContext.vue";
+import TotalPrice from "@/components/Cart/TotalPrice.vue";
+
 export default {
   components: {
-    CartRow
+    CartContext,
+    TotalPrice
   },
   methods: {
     checkout() {
@@ -125,15 +70,6 @@ export default {
     cart() {
       return this.$store.getters.cart;
     },
-    total() {
-           return  this.$store.getters.cart.total;
-    },
-    totalDiscount() {
-           return  this.$store.getters.cart.totalDiscount;
-    },
-    totalPrice() {
-           return this.total + this.totalDiscount;
-    }
   },
 };
 </script>

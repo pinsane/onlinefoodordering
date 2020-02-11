@@ -12,10 +12,12 @@ export default new Vuex.Store({
             totalDiscount:0
         },
         currentUser: localStorage.currentUser && localStorage.currentUser != '' ? JSON.parse(localStorage.currentUser) : null,
+        orders: localStorage.orders && localStorage.orders != '' ? JSON.parse(localStorage.orders) : [],
     },
     getters: {
         cart: s => s.cart,
         currentUser: s => s.currentUser,
+        orders: s => s.orders,
     },
     actions: {
         addToCart({commit}, {product, quantity}) {
@@ -26,9 +28,9 @@ export default new Vuex.Store({
             // call server to remove item
             commit ('removeFromCart', {product, quantity});
         },
-        checkout({commit}) {
+        checkout({commit}, additionalInfo) {
             // send checkout to server
-            commit ('checkout');
+            commit ('checkout', additionalInfo);
         },
         login ({ commit }, {username, password}) {
             return userService.getUsers().then((response)=> {
@@ -47,7 +49,9 @@ export default new Vuex.Store({
         },
     },
     mutations: {
-        checkout (s) {
+        checkout (s, additionalInfo) {
+            s.orders.push({order: s.cart, user: s.currentUser, additionalInfo });
+            localStorage.orders = JSON.stringify(s.orders);
             s.cart= {
                 items:[],
                 total:0,
