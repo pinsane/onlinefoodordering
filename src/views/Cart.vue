@@ -65,19 +65,12 @@
           <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
             <div class="cart-total mb-3">
               <h3>مجموع سبد خرید</h3>
-<<<<<<< HEAD
+
               <p class="d-flex">
                 <span>قیمت کل</span>
                 <span dir="ltr">{{totalPrice}} ریال</span>
               </p>
               <p class="d-flex">
-=======
-              <p class="d-flex">
-                <span>قیمت کل</span>
-                <span dir="ltr">{{totalPrice}} ریال</span>
-              </p>
-              <p class="d-flex">
->>>>>>> 8617e67b250ea169515c807d8830cb26f000af5c
                 <span>تخفیف</span>
                 <span dir="ltr">-{{totalDiscount}} ریال</span>
               </p>
