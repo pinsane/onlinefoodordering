@@ -12,8 +12,8 @@
                   style="background-image: url(images/category.jpg);"
                 >
                   <div class="text text-center">
-                    <h2>Vegetables</h2>
-                    <p>Protect the health of every home</p>
+                    <h2>دسته بندی ها</h2>
+                    <p>‍‍‍‍‍ پاسخگوی همه سلیقه ها هستیم </p>
                     <p>
                       
                     </p>

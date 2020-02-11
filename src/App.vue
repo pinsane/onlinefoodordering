@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TopBand />
+   
     <Navbar />
     <router-view />
     <Footer />
@@ -10,12 +10,12 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
-import TopBand from "@/components/TopBand.vue";
+
 export default {
   components: {
     Navbar,
     Footer,
-    TopBand
+    
   }
 };
 </script>

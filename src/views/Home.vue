@@ -5,10 +5,10 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row no-gutters ftco-services">
-          <ServiceTile  bgClass="bg-color-1" iconClass="flaticon-shipped" line1="Free Shipping" line2="On order over $100" />
-          <ServiceTile  bgClass="bg-color-2" iconClass="flaticon-diet" line1="Always Fresh" line2="Product well package" />
-          <ServiceTile  bgClass="bg-color-3" iconClass="flaticon-award" line1="Superior Quality" line2="Quality Products" />
-          <ServiceTile  bgClass="bg-color-4" iconClass="flaticon-customer-service" line1="Support" line2="24/7 Support" />
+          <ServiceTile  bgClass="bg-color-1" iconClass="flaticon-shipped" line1="ارسال رایگان" line2="برای سفارشات بالای سی هزار تومان " />
+          <ServiceTile  bgClass="bg-color-2" iconClass="flaticon-diet" line1="همیشه تازه" line2=" بسته بندی حرفه ای سفارشات" />
+          <ServiceTile  bgClass="bg-color-3" iconClass="flaticon-award" line1="کیفیت برتر" line2="استفاده از مواد درجه یک" />
+          <ServiceTile  bgClass="bg-color-4" iconClass="flaticon-customer-service" line1="پشتیبانی" line2="تمام طول هفته و تمام وقت" />
         </div>
       </div>
     </section>
@@ -46,14 +46,15 @@
       <div class="container py-4">
         <div class="row d-flex justify-content-center py-5">
           <div class="col-md-6">
-            <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
-            <span>Get e-mail updates about our latest shops and special offers</span>
+            <h2 style="font-size: 22px;" class="mb-0">در خبرنامه ما عضو شوید</h2>
+            <span>برای اطلاع از اخرین پیشهادات و خدمات ویژه 
+            </span>
           </div>
           <div class="col-md-6 d-flex align-items-center">
             <form action="#" class="subscribe-form">
               <div class="form-group d-flex">
-                <input type="text" class="form-control" placeholder="Enter email address" />
-                <input type="submit" value="Subscribe" class="submit px-3" />
+                <input type="text" class="form-control" placeholder="ایمیل خود را وارد کنید" />
+                <input type="submit" value="تایید" class="submit px-3" />
               </div>
             </form>
           </div>

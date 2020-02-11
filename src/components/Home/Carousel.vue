@@ -14,7 +14,7 @@
       >
         <!-- Text slides with image -->
         <b-carousel-slide
-          caption="First slide"
+          caption="سفارش آنلاین غذا"
           text="Nulla vitae elit libero, a pharetra augue mollis interdum."
           class="slider-item"
           img-src="/images/bg_1.jpg"
