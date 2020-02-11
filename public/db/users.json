@@ -25,12 +25,21 @@
         "phone": "2322222"
       },
       {
-        "id": 1,
+        "id": 4,
         "username": "user4",
         "password": "user4",
         "name": "User 4",
         "email": "user1@food.com",
         "phone": "2422222"
+      },
+      {
+        "id": 5,
+        "username": "admin",
+        "password": "admin",
+        "name": "Site Admin",
+        "email": "admin@food.com",
+        "phone": "2422222",
+        "role" : "admin"
       }
     ]
   }

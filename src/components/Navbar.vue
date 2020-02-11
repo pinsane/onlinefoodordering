@@ -36,6 +36,8 @@
             <b-nav-item class="nav-item cta cta-colored" to="/cart">
               <span class="icon-shopping_cart"></span>[{{cartCount}}]
             </b-nav-item>
+            <b-nav-item v-if="user && user.role === 'admin'" to="/administration">مدیریت سایت</b-nav-item>
+
           </b-navbar-nav>
         </div>
       </b-collapse>
