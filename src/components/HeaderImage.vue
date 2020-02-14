@@ -5,11 +5,11 @@
         <div class="col-md-9 ftco-animate text-center">
           <p class="breadcrumbs">
             <span class="mr-2">
-              <a to="/">Home</a>
+              <a to="/"></a>
             </span>
-            <span>Checkout</span>
+            <span></span>
           </p>
-          <h1 class="mb-0 bread">Checkout</h1>
+          <h1 class="mb-0 bread"></h1>
         </div>
       </div>
     </div>

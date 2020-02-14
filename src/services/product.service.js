@@ -16,13 +16,5 @@ export default {
             return response.data.productList.find(p => p.id == id);
         });
     }
-    // bulkUpdate (ctx, value) {
-    //     return axios.post(`${this.apiVersion}/MemberDataBulk/BulkUpdate`, value, ctx);
-    // },
-    // multipleBulkUpdate (ctx, value) {
-    //     return axios.post(`${this.apiVersion}/MemberDataBulk/MultipleBulkUpdate`, value, ctx);
-    // },
-    // runDataProcess (ctx, value) {
-    //     return axios.post(`${this.apiVersion}/MemberDataBulk/RunDataProcess`, value, ctx);
-    // },
+ 
 };

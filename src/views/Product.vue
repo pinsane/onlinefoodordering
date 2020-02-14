@@ -11,58 +11,13 @@
           </div>
           <div class="col-lg-6 product-details pl-md-5 ftco-animate">
             <h3>{{product.name}}</h3>
-            <!-- <div class="rating d-flex">
-              <p class="text-left mr-4">
-                <a href="#" class="mr-2">5.0</a>
-                <a href="#">
-                  <span class="ion-ios-star-outline"></span>
-                </a>
-                <a href="#">
-                  <span class="ion-ios-star-outline"></span>
-                </a>
-                <a href="#">
-                  <span class="ion-ios-star-outline"></span>
-                </a>
-                <a href="#">
-                  <span class="ion-ios-star-outline"></span>
-                </a>
-                <a href="#">
-                  <span class="ion-ios-star-outline"></span>
-                </a>
-              </p>
-              <p class="text-left mr-4">
-                <a href="#" class="mr-2" style="color: #000;">
-                  100
-                  <span style="color: #bbb;">Rating</span>
-                </a>
-              </p>
-              <p class="text-left">
-                <a href="#" class="mr-2" style="color: #000;">
-                  500
-                  <span style="color: #bbb;">Sold</span>
-                </a>
-              </p>
-            </div> -->
+            
             <p class="price">
               <span>{{product.salePrice}} ریال</span>
             </p>
             <p>{{product.description}}</p>
             <div class="row mt-4">
-              <!-- <div class="col-md-6">
-                <div class="form-group d-flex">
-                  <div class="select-wrap">
-                     <div class="icon">
-                      <span class="ion-ios-arrow-down"></span>
-                    </div>
-                    <select name id class="form-control">
-                      <option value>Small</option>
-                      <option value>Medium</option>
-                      <option value>Large</option>
-                      <option value>Extra Large</option>
-                    </select>
-                  </div>
-                </div>
-              </div> -->
+           
               <div class="w-100"></div>
               <div class="input-group col-md-6 d-flex mb-3">
                 <span class="input-group-btn mr-2">
