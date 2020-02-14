@@ -14,7 +14,7 @@
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">سفارش</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+            <p>سعی ما دراین است که بهترین غذا در کمترین زمان در اختیار شما باشد.</p>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
               <li class="ftco-animate">
                 <a href="#">
@@ -36,65 +36,59 @@
         </div>
         <div class="col-md">
           <div class="ftco-footer-widget mb-4 ml-md-5">
-            <h2 class="ftco-heading-2">Menu</h2>
+            <h2 class="ftco-heading-2">منو</h2>
             <ul class="list-unstyled">
               <li>
-                <a href="#" class="py-2 d-block">Shop</a>
+                <a href="#" class="py-2 d-block">خرید</a>
               </li>
               <li>
-                <a href="#" class="py-2 d-block">About</a>
+                <a href="#" class="py-2 d-block">درباره ما</a>
               </li>
+             
               <li>
-                <a href="#" class="py-2 d-block">Journal</a>
-              </li>
-              <li>
-                <a href="#" class="py-2 d-block">Contact Us</a>
+                <a href="#" class="py-2 d-block">ارتباط با ما</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-md-4">
           <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">Help</h2>
+            <h2 class="ftco-heading-2">پشتیبانی</h2>
             <div class="d-flex">
               <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
                 <li>
-                  <a href="#" class="py-2 d-block">Shipping Information</a>
+                  <a href="#" class="py-2 d-block">نحوه ارسال سفارش</a>
                 </li>
                 <li>
-                  <a href="#" class="py-2 d-block">Returns &amp; Exchange</a>
+                  <a href="#" class="py-2 d-block">رویه بازگشت وجه</a>
                 </li>
                 <li>
-                  <a href="#" class="py-2 d-block">Terms &amp; Conditions</a>
+                  <a href="#" class="py-2 d-block">شرایط استفاده از سایت</a>
                 </li>
-                <li>
-                  <a href="#" class="py-2 d-block">Privacy Policy</a>
-                </li>
+                
               </ul>
               <ul class="list-unstyled">
                 <li>
-                  <a href="#" class="py-2 d-block">FAQs</a>
+                  <a href="#" class="py-2 d-block">سؤالات متداول</a>
                 </li>
-                <li>
-                  <a href="#" class="py-2 d-block">Contact</a>
-                </li>
+               
               </ul>
             </div>
           </div>
         </div>
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
-            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <h2 class="ftco-heading-2">پاسخ گوی سوالات شما هستیم.</h2>
             <div class="block-23 mb-3">
               <ul>
                 <li>
                   <span class="icon icon-map-marker"></span>
-                  <span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span>
+                  <span class="text">مشهد فلاحی 1 </span>
                 </li>
                 <li>
                   <a href="#">
                     <span class="icon icon-phone"></span>
-                    <span class="text">+2 392 3929 210</span>
+                    <span class="text">05135223299</span>
                   </a>
                 </li>
                 <li>
@@ -110,7 +104,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>
+          <p hidden>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;All rights reserved | This template is made with
             <i

@@ -26,7 +26,7 @@
                     <label for="streetaddress">آدرس محل تحویل</label>
                     <textarea 
                       class="form-control"
-                      placeholder="House number and street name" v-model="additionalInfo.address"
+                      placeholder="آدرس" v-model="additionalInfo.address"
                     />
                   </div> 
                 </div> 

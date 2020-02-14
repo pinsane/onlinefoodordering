@@ -15,15 +15,15 @@
         <!-- Text slides with image -->
         <b-carousel-slide
           caption="سفارش آنلاین غذا"
-          text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+          text=""
           class="slider-item"
           img-src="/images/bg_1.jpg"
         >
         </b-carousel-slide>
 
         <b-carousel-slide
-          caption="Second slide"
-          text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+          caption=""
+          text=""
           class="slider-item"
           img-src="/images/bg_2.jpg"
         >

@@ -18,7 +18,7 @@
         <label for="streetaddress">آدرس محل تحویل</label>
         <textarea disabled
           class="form-control"
-          placeholder="House number and street name"
+          placeholder="آدرس"
           :value="additionalInfo.address"
         />
       </div>
